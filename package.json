@@ -1,0 +1,40 @@
+{
+  "name": "draw-billboard",
+  "version": "0.0.0",
+  "description": "Draws a billboarded sprite",
+  "main": "billboard.js",
+  "directories": {
+    "example": "example"
+  },
+  "dependencies": {
+    "game-shell-orbit-camera": "~0.0.0",
+    "gl-matrix": "~2.0.0",
+    "gl-mesh": "~0.1.0",
+    "gl-render-text": "~0.0.0",
+    "gl-shader": "~0.0.6",
+    "gl-now": "~0.0.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mikolalysenko/draw-billboard.git"
+  },
+  "keywords": [
+    "billboard",
+    "sprite",
+    "draw",
+    "webgl",
+    "gl",
+    "3d"
+  ],
+  "author": "Mikola Lysenko",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "gitHead": "d71a9c80c6d615755913584d3468f422eff05cca",
+  "bugs": {
+    "url": "https://github.com/mikolalysenko/draw-billboard/issues"
+  }
+}
