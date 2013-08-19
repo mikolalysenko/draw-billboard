@@ -35,7 +35,7 @@ shell.on("gl-render", function() {
 })
 ```
 
-Try it in your browser.
+[Try it in your browser.](http://mikolalysenko.github.io/draw-billboard/)
 
 Install
 =======
