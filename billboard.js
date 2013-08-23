@@ -6,7 +6,7 @@ var glm = require("gl-matrix")
 var mat4 = glm.mat4
 
 function createBillboardMesh(gl) {
-  var mesh = createMesh(gl, [[0,1,2], [1,2,3]], {
+  var mesh = createMesh(gl, [[1,0,2], [1,2,3]], {
     "uv": [[-1,-1], [-1,1], [1,-1], [1,1]]
   })
   gl.__BILLBOARD_MESH = mesh
@@ -26,7 +26,7 @@ function createBillboardShader(gl) {
   uniform float height;\
   varying vec2 tc;\
   void main() {\
-    vec4 mposition = vec4(uv, 0.0, 0.0) + view * model * vec4(position, 1.0);\
+    vec4 mposition = vec4(uv.x * width, uv.y * height, 0.0, 0.0) + view * model * vec4(position, 1.0);\
     gl_Position = projection * mposition;\
     tc = (0.5 * vec2(1.0+uv.x,1.0-uv.y) - lo) * (hi - lo);\
   }",
@@ -66,6 +66,9 @@ function drawBillboard(gl, position, options) {
   shader.uniforms.model = model
   shader.uniforms.view = view
   shader.uniforms.projection = projection
+  if(options.texture) {
+    shader.uniforms.texture = options.texture.bind(0)
+  }
   
   mesh.bind(shader)
   mesh.draw()
