@@ -2,8 +2,7 @@
 
 var createShader = require("gl-shader")
 var createMesh = require("gl-mesh")
-var glm = require("gl-matrix")
-var mat4 = glm.mat4
+var mat4 = require("gl-mat4")
 
 function createBillboardMesh(gl) {
   var mesh = createMesh(gl, [[1,0,2], [1,2,3]], {
