@@ -9,8 +9,8 @@ Example
 var shell = require("gl-now")()
 var camera = require("game-shell-orbit-camera")(shell)
 var renderText = require("gl-render-text")
+var mat4 = require("gl-mat4")
 var drawBillboard = require("draw-billboard")
-var mat4 = require("gl-matrix").mat4
 
 var texture
 var positions = new Array(100)
